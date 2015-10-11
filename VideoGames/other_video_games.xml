@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<video_games>
+    <video_game>
+        <name>Bioshock Infinite</name>
+        <genre>Narrative FPS</genre>
+        <rating>5</rating>
+        <synopsis>While the shooting is bland, the storytelling is top-notch.</synopsis>
+    </video_game>
+    <video_game>
+        <name>The Cave</name>
+        <genre>Platform Adventure Game</genre>
+        <rating>4</rating>
+        <synopsis>A funny creative adventure game that takes place in a cave.</synopsis>
+    </video_game>
+    <video_game>
+        <name>Dead Rising</name>
+        <genre>3rd Person Action Game</genre>
+        <rating>3</rating>
+        <synopsis>A zombie game that takes place in a mall. Somewhat frustrating but fun.</synopsis>
+    </video_game>
+    <video_game>
+        <name>Battlefield 4</name>
+        <genre>FPS</genre>
+        <rating>2</rating>
+        <synopsis>Could have been great, but slogged with bugs.</synopsis>
+    </video_game>
+    <video_game>
+        <name>Pitfall for iOS</name>
+        <genre>DLC Collecting</genre>
+        <rating>1</rating>
+        <synopsis>Really? I have to pay for continues?</synopsis>
+    </video_game>
+</video_games>
