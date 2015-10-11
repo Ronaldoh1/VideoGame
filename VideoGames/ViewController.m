@@ -77,7 +77,29 @@
     
     NSString * xml = [writer toString];
     [xml writeToURL:saveFile atomically:YES encoding:NSUTF8StringEncoding error:nil];
-    
+
+    //creating the structure of JSON
+
+    NSMutableArray *topLevelContiner = [@[] mutableCopy];
+    for (RWTVideoGame *game in self.videoGames){
+
+        NSMutableDictionary *object = [@{}mutableCopy];
+        object[@"name"] = game.name;
+        object[@"genre"] = game.genre;
+        object[@"rating"] = @(game.rating);
+        object[@"synopsis"] = game.synopsis;
+        [topLevelContiner addObject: object];
+
+        //create a save file.
+
+        NSURL * library = [fileManager URLForDirectory:NSLibraryDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+        NSURL *jsonFile = [library URLByAppendingPathComponent:@"video_games.json"];
+
+        NSData *json = [NSJSONSerialization dataWithJSONObject:topLevelContiner options:NSJSONWritingPrettyPrinted error:nil];
+
+        //write it out
+        [json writeToURL:jsonFile atomically:YES];
+    }
 }
 
 -(void) viewWillAppear:(BOOL)animated
